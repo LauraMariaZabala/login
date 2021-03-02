@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="estilosLogin.css" />
+    <title>Inicio de sesión</title>
+</head>
+<body>
+    <div class="container">
+        
+        <img src="Logo.png" width="300px" style=" align-items: center; justify-content: center;" alt="">
+        <h1>Inicio de sesión</h1>
+        <form>
+            <div class="form-control">
+                <input type="text" required>
+                <label>usuario:</label>
+            </div>
+
+            <div class="form-control">
+                <input type="password" required>
+                <label>Contraseña:</label>
+            </div>
+
+            <button class="btn">Login</button>
+
+        </form>
+    </div>
+    <script type="text/javascript">
+        const labels = document.querySelectorAll('.form-control label')
+
+        labels.forEach(label => {
+            label.innerHTML = label.innerText
+                .split('')
+                .map((letter, idx) => `<span style="transition-delay:${idx * 50}ms">${letter}</span>`)
+                .join('')
+        })
+
+    </script>
+</body>
+</html>
+
